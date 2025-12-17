@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text LendWise</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: #576c5b;
+        }
+        .container {
+            text-align: center;
+            padding: 40px;
+        }
+        .btn {
+            display: inline-block;
+            background: #daa520;
+            color: #fff;
+            padding: 20px 50px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        p {
+            color: #fff;
+            margin-top: 15px;
+            font-size: 16px;
+        }
+        .desktop-msg {
+            color: #fff;
+            font-size: 18px;
+        }
+    </style>
+    <script>
+        function isMobile() {
+            return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+        }
+        window.onload = function() {
+            if (isMobile()) {
+                window.location.href = "sms:+15704389477";
+            }
+        };
+    </script>
+</head>
+<body>
+    <div class="container">
+        <script>
+            if (isMobile()) {
+                document.write('<a href="sms:+15704389477" class="btn">Tap to Text Us</a><p>Opening Messages...</p>');
+            } else {
+                document.write('<p class="desktop-msg">Text us at:<br><strong style="font-size: 24px;">(570) 438-9477</strong></p>');
+            }
+        </script>
+        <noscript>
+            <a href="sms:+15704389477" class="btn">Tap to Text Us</a>
+        </noscript>
+    </div>
+</body>
+</html>
